@@ -10,6 +10,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div id="lucky_numbers">None</div>
+			<div id="ticket_numbers">None</div>
 		</div>
 		<div class="row head">
 			<div class="col-10 left">
@@ -52,6 +53,7 @@
 	var is_same;
 	var gameover = false;
 	var div_ln = document.getElementById('lucky_numbers');
+	var div_ln2 = document.getElementById('ticket_numbers');
 
 	function get_number() {
 		if (!gameover) {
@@ -81,24 +83,23 @@
 	function new_game() {
 		if (gameover) {
 			gameover = false;
-			div_ln.innerHTML = "You are starting a new game";
-			
 		}
+		check_gameover2();
 		clear_table();
 		var skaicius;
 		skaicius = Math.floor(Math.random()*10);
 		document.getElementById(skaicius).style.backgroundColor = "red";
 		ticket.push(skaicius);
-		div_ln.innerHTML = ticket;
-		check_gameover2();
+		div_ln2.innerHTML = ticket;	
+		
 
-		if (gameover == true) {
-			var is_same = (array1.length == array2.length) && array1.every(function(element, index) {
-    		return element === array2[index]; 
-			});
-		} else if {
+		//if (gameover == true) {
+			//var is_same = (lucky.length == ticket.length) && lucky.every(function(element, index) {
+    		//return element === ticket[index]; 
+			//});
+		//} else if {
 
-		}
+		//}
 		
 
 	}
