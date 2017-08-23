@@ -1,0 +1,29 @@
+.left {
+	padding: 10px;
+	background-color: white;
+	color: orange;
+}
+
+.right {
+	padding: 10px;
+	background-color: gray;
+	color: orange;
+}
+.langelis {
+	padding: 30px;
+	margin: 2px;
+	background-color: gray;
+	float: left;
+	font-size: 15px;
+	color: white;
+	border: 2px solid white;
+}
+#lucky_numbers {
+	padding: 30px;
+	margin: 2px;
+	background-color: gray;
+	float: left;
+	font-size: 15px;
+	color: white;
+	border: 1px solid white;
+}
