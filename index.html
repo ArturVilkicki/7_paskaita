@@ -49,8 +49,10 @@
 	//var c;
 	var lucky = [];
 	var ticket = [];
+	var is_same;
 	var gameover = false;
 	var div_ln = document.getElementById('lucky_numbers');
+
 	function get_number() {
 		if (!gameover) {
 			clear_table();
@@ -89,9 +91,15 @@
 		ticket.push(skaicius);
 		div_ln.innerHTML = ticket;
 		check_gameover2();
-		for (var i = 0; i <= 8; i++) {
-			document.getElementById(i).style.backgroundColor = "gray";
+
+		if (gameover == true) {
+			var is_same = (array1.length == array2.length) && array1.every(function(element, index) {
+    		return element === array2[index]; 
+			});
+		} else if {
+
 		}
+		
 
 	}
 	function check_gameover2() {
@@ -100,6 +108,7 @@
 		} else {
 			alert("Game is Over!");
 			gameover = true;
+
 		}
 	}
 	
