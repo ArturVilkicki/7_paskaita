@@ -84,13 +84,18 @@
 		if (gameover) {
 			gameover = false;
 		}
-		check_gameover2();
 		clear_table();
 		var skaicius;
 		skaicius = Math.floor(Math.random()*10);
+		for (var i = 0; i <= 8; i++) {
+			ticket.push(skaicius);
+			document.getElementById(skaicius).style.backgroundColor = "gray";
+		}
 		document.getElementById(skaicius).style.backgroundColor = "red";
-		ticket.push(skaicius);
-		div_ln2.innerHTML = ticket;	
+		
+		lucky.push(skaicius);
+		div_ln2.innerHTML = lucky;	
+		check_gameover();
 		
 
 		//if (gameover == true) {
@@ -103,15 +108,7 @@
 		
 
 	}
-	function check_gameover2() {
-		if (ticket.length <=8) {
-			//zaidimas tesiasi
-		} else {
-			alert("Game is Over!");
-			gameover = true;
-
-		}
-	}
+	
 	
 
 
